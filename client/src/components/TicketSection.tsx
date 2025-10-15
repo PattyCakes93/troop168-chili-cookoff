@@ -22,14 +22,12 @@ const affiliateGroups = [
 export default function TicketSection() {
   const [quantity, setQuantity] = useState(1);
   const [selectedAffiliate, setSelectedAffiliate] = useState<string>('');
-  const [buyerName, setBuyerName] = useState('');
-  const [buyerEmail, setBuyerEmail] = useState('');
   const { toast } = useToast();
 
   const ticketPrice = 15;
   const total = quantity * ticketPrice;
 
-  const handlePurchase = () => {
+  const handleRegister = () => {
     if (!selectedAffiliate) {
       toast({
         title: "Please select a referral source",
@@ -39,27 +37,16 @@ export default function TicketSection() {
       return;
     }
 
-    if (!buyerName || !buyerEmail) {
-      toast({
-        title: "Please fill in your details",
-        description: "We need your name and email to complete the purchase.",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    console.log('Purchase triggered:', { quantity, total, affiliate: selectedAffiliate, name: buyerName, email: buyerEmail });
+    console.log('Registration triggered:', { quantity, total, affiliate: selectedAffiliate });
     
     toast({
-      title: "Purchase Successful! 🎉",
-      description: `Your ${quantity} ticket(s) support ${selectedAffiliate}. Check your email for confirmation.`,
+      title: "Registration Started!",
+      description: `Proceeding to checkout for ${quantity} ticket(s) supporting ${selectedAffiliate}.`,
     });
 
-    // Reset form - in real app, this would happen after payment
+    // Reset form - in real app, this would redirect to payment
     setQuantity(1);
     setSelectedAffiliate('');
-    setBuyerName('');
-    setBuyerEmail('');
   };
 
   return (
@@ -84,31 +71,6 @@ export default function TicketSection() {
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="space-y-4">
-                <div>
-                  <Label htmlFor="name" className="text-base">Your Name</Label>
-                  <Input
-                    id="name"
-                    placeholder="John Doe"
-                    value={buyerName}
-                    onChange={(e) => setBuyerName(e.target.value)}
-                    className="mt-2"
-                    data-testid="input-buyer-name"
-                  />
-                </div>
-
-                <div>
-                  <Label htmlFor="email" className="text-base">Email Address</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    placeholder="john@example.com"
-                    value={buyerEmail}
-                    onChange={(e) => setBuyerEmail(e.target.value)}
-                    className="mt-2"
-                    data-testid="input-buyer-email"
-                  />
-                </div>
-
                 <div>
                   <Label htmlFor="affiliate" className="text-base font-semibold">
                     Who referred you? <span className="text-destructive">*</span>
@@ -187,10 +149,10 @@ export default function TicketSection() {
                   variant="destructive" 
                   size="lg" 
                   className="w-full text-lg"
-                  onClick={handlePurchase}
-                  data-testid="button-purchase-tickets"
+                  onClick={handleRegister}
+                  data-testid="button-register"
                 >
-                  Purchase Tickets - ${total}
+                  Register - ${total}
                 </Button>
 
                 <p className="text-xs text-center text-muted-foreground">
