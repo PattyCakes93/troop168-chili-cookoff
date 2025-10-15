@@ -7,21 +7,19 @@ import { useToast } from '@/hooks/use-toast';
 
 export default function DonationSection() {
   const [customAmount, setCustomAmount] = useState('');
-  const [promoCode, setPromoCode] = useState('');
   const { toast } = useToast();
 
   const handleDonation = (amount: number, label: string) => {
     // TODO: Integrate with payment processor (Google Form or Stripe)
     // For now, show confirmation
-    const promoMessage = promoCode ? ` Supporting: ${promoCode.toUpperCase()}` : '';
     toast({
       title: "Thank you for supporting St. Pat's Troop 168!",
-      description: `Your generosity helps our Scouts learn, serve, and grow.${promoMessage}`,
+      description: "Your generosity helps our Scouts learn, serve, and grow.",
       duration: 5000,
     });
     
     // Placeholder - replace with actual payment link
-    console.log(`Donation: $${amount} - ${label} - Promo Code: ${promoCode || 'None'}`);
+    console.log(`Donation: $${amount} - ${label}`);
   };
 
   const handleCustomDonation = () => {
@@ -56,25 +54,6 @@ export default function DonationSection() {
               </p>
             </div>
           </div>
-
-          <Card className="bg-muted/30 mb-8">
-            <CardContent className="p-6">
-              <div className="max-w-md mx-auto">
-                <label htmlFor="donation-promo" className="block text-sm font-medium text-foreground mb-2 text-center">
-                  Supporting a Scout? Enter their promo code (optional)
-                </label>
-                <Input
-                  id="donation-promo"
-                  type="text"
-                  placeholder="Enter promo code"
-                  value={promoCode}
-                  onChange={(e) => setPromoCode(e.target.value)}
-                  className="text-center uppercase"
-                  data-testid="input-promo-code-donation"
-                />
-              </div>
-            </CardContent>
-          </Card>
 
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             <Card className="hover-elevate">
