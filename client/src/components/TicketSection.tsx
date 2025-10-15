@@ -1,8 +1,15 @@
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
 import { Ticket } from 'lucide-react';
 
 export default function TicketSection() {
+  const [promoCode, setPromoCode] = useState('');
+
   const handleRegister = () => {
+    // Log promo code for tracking (will be integrated with Square later)
+    console.log(`Ticket purchase - Promo Code: ${promoCode.toUpperCase() || 'None'}`);
     // Open Google Form for ticket registration
     window.open('https://forms.gle/QghAykWBEzkyAPpH9', '_blank');
   };
@@ -22,6 +29,25 @@ export default function TicketSection() {
               Tickets are $10 per person
             </p>
           </div>
+
+          <Card className="bg-background/50 mb-8">
+            <CardContent className="p-6">
+              <div className="max-w-md mx-auto">
+                <label htmlFor="ticket-promo" className="block text-sm font-medium text-foreground mb-2 text-center">
+                  Supporting a Scout? Enter their promo code (optional)
+                </label>
+                <Input
+                  id="ticket-promo"
+                  type="text"
+                  placeholder="Enter promo code"
+                  value={promoCode}
+                  onChange={(e) => setPromoCode(e.target.value)}
+                  className="text-center uppercase"
+                  data-testid="input-promo-code-ticket"
+                />
+              </div>
+            </CardContent>
+          </Card>
 
           <div className="text-center">
             <Button 
