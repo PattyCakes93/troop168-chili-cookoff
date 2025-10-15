@@ -24,7 +24,7 @@ export default function TicketSection() {
   const [selectedAffiliate, setSelectedAffiliate] = useState<string>('');
   const { toast } = useToast();
 
-  const ticketPrice = 15;
+  const ticketPrice = 10;
   const total = quantity * ticketPrice;
 
   const handleRegister = () => {
