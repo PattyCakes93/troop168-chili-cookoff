@@ -15,9 +15,9 @@ export default function ContactSection() {
 
           <Card className="bg-primary-foreground/10 backdrop-blur-sm border-primary-foreground/20">
             <CardContent className="p-8">
-              <div className="flex items-center justify-center gap-2 text-primary-foreground/90 text-lg">
-                <Calendar className="w-5 h-5 text-chart-2" />
-                <span>Competitor Registration Deadline: November 15, 2025</span>
+              <div className="flex items-center justify-center gap-2 text-primary-foreground/90 text-xl font-semibold">
+                <Calendar className="w-6 h-6 text-chart-2" />
+                <span>Register Here</span>
               </div>
             </CardContent>
           </Card>
