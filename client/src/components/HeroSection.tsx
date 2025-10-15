@@ -27,7 +27,7 @@ export default function HeroSection() {
             Saturday, January 31, 2025
           </Badge>
 
-          <h1 className="text-5xl md:text-7xl font-bold font-display text-primary-foreground mb-4 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-display text-primary-foreground mb-4 leading-tight whitespace-nowrap">
             ST. PAT'S SCOUT TROOP 168
           </h1>
           
