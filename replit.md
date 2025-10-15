@@ -13,9 +13,11 @@ The website provides event details, competition information, and integrates with
 - Simplified ticket purchase flow to use Google Form (Stripe integration deferred for future implementation)
 - Updated all dates to January 31, 2026 (Saturday)
 - Corrected event day from Friday to Saturday
+- Corrected competitor registration deadline to November 15, 2025
 - Streamlined contact section to show competitor registration deadline with Google Form link
 - Removed personal contact information per user request
 - Set ticket price to $10 per person
+- Added donation section with three preset amounts ($50, $100, $200) and custom donation option featuring flame icons in scout branding colors
 
 ## User Preferences
 
