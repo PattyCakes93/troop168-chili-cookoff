@@ -22,7 +22,7 @@ export default function Header() {
           </h1>
         </div>
         
-        <div className="hidden lg:flex items-center gap-6">
+        <div className="hidden md:flex items-center gap-4 lg:gap-6">
           <CountdownTimer />
           <Button 
             variant="destructive" 
@@ -38,7 +38,7 @@ export default function Header() {
           variant="destructive" 
           size="default"
           onClick={scrollToTickets}
-          className="lg:hidden"
+          className="md:hidden"
           data-testid="button-get-tickets-mobile"
         >
           Get Tickets
