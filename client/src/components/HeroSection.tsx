@@ -12,17 +12,7 @@ export default function HeroSection() {
 
   return (
     <section className="relative min-h-[80vh] bg-primary overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/70"></div>
-      
-      <div className="absolute right-0 top-0 bottom-0 w-full md:w-1/2 opacity-30 md:opacity-100">
-        <img 
-          src={chiliImage} 
-          alt="Steaming hot chili" 
-          className="w-full h-full object-cover"
-        />
-      </div>
-
-      <div className="absolute right-4 md:right-12 lg:right-20 top-1/2 -translate-y-1/2 w-64 md:w-80 lg:w-[28rem] z-10">
+      <div className="absolute bottom-8 right-4 md:bottom-12 md:right-12 lg:right-20 w-56 md:w-72 lg:w-96 z-10">
         <img 
           src={scoutUniformImage} 
           alt="Scout uniform with shamrock and chili" 
