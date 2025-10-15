@@ -3,15 +3,42 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Ticket } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
+
+// ============================================================================
+// SQUARE PAYMENT LINK - PASTE YOUR URL HERE
+// ============================================================================
+// Replace this placeholder URL with your actual Square ticket payment link
+const SQUARE_TICKET_URL = ''; // Paste $10 ticket purchase link here
+// ============================================================================
 
 export default function TicketSection() {
   const [promoCode, setPromoCode] = useState('');
+  const { toast } = useToast();
 
   const handleRegister = () => {
-    // Log promo code for tracking (will be integrated with Square later)
-    console.log(`Ticket purchase - Promo Code: ${promoCode.toUpperCase() || 'None'}`);
-    // Open Google Form for ticket registration
-    window.open('https://forms.gle/QghAykWBEzkyAPpH9', '_blank');
+    if (!SQUARE_TICKET_URL) {
+      // If Square URL not configured yet, show a message
+      toast({
+        title: "Coming Soon!",
+        description: "Online ticket sales will be available soon. Thank you for your interest!",
+        duration: 5000,
+      });
+      return;
+    }
+
+    // Log promo code for tracking
+    // Note: Square payment links don't natively support promo codes,
+    // so this logs the code for manual tracking. You may want to set up
+    // a backend endpoint to record this data before redirecting to Square.
+    if (promoCode) {
+      console.log(`Ticket purchase - Promo Code: ${promoCode.toUpperCase()}`);
+      // TODO: Consider sending promo code to backend for tracking:
+      // await fetch('/api/track-promo', { method: 'POST', body: JSON.stringify({ code: promoCode }) });
+    }
+    
+    // Open Square payment link in new tab
+    window.open(SQUARE_TICKET_URL, '_blank', 'noopener,noreferrer');
   };
 
   return (
