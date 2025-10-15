@@ -1,6 +1,6 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { ChefHat, Heart, Users2, HandHeart } from 'lucide-react';
-import communityImage from '@assets/stock_images/community_gathering__03cee9ca.jpg';
+import troopLogo from '@assets/Untitled design-3_1760489925654.png';
 import catholicCharitiesLogo from '@assets/image_1760488967768.png';
 
 const benefits = [
@@ -69,15 +69,12 @@ export default function WhyJoinSection() {
             </Card>
           </div>
 
-          <div className="relative">
-            <div className="aspect-[4/3] rounded-xl overflow-hidden">
-              <img 
-                src={communityImage} 
-                alt="Community gathering" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="absolute inset-0 bg-primary/20 rounded-xl"></div>
+          <div className="relative flex items-center justify-center bg-muted/50 rounded-xl p-8 md:p-12">
+            <img 
+              src={troopLogo} 
+              alt="Troop 168 St. Patrick's Parish" 
+              className="w-full max-w-md h-auto object-contain"
+            />
           </div>
         </div>
       </div>
