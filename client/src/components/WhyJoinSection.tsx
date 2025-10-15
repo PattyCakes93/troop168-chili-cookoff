@@ -1,6 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { ChefHat, Heart, Users2, HandHeart } from 'lucide-react';
 import communityImage from '@assets/stock_images/community_gathering__03cee9ca.jpg';
+import catholicCharitiesLogo from '@assets/image_1760488967768.png';
 
 const benefits = [
   {
@@ -52,10 +53,18 @@ export default function WhyJoinSection() {
             </div>
 
             <Card className="mt-8 border-2 border-destructive bg-destructive/5">
-              <CardContent className="p-6">
+              <CardContent className="p-6 space-y-4">
                 <p className="text-sm font-medium text-foreground">
                   <span className="text-destructive font-bold">No good chili should go to waste!</span> We're aiming to donate 20 gallons to those in need.
                 </p>
+                <div className="flex items-center justify-center gap-3 pt-2 border-t">
+                  <span className="text-xs text-muted-foreground">In partnership with</span>
+                  <img 
+                    src={catholicCharitiesLogo} 
+                    alt="Catholic Charities" 
+                    className="h-8 w-auto object-contain"
+                  />
+                </div>
               </CardContent>
             </Card>
           </div>
