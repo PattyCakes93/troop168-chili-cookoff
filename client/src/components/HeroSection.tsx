@@ -22,8 +22,8 @@ export default function HeroSection() {
 
       <div className="relative container mx-auto px-4 md:px-6 py-16 md:py-24 flex items-center min-h-[80vh]">
         <div className="max-w-3xl relative z-10">
-          <Badge className="bg-chart-2 text-foreground border-chart-2 mb-6" data-testid="badge-event-date">
-            <Calendar className="w-4 h-4 mr-2" />
+          <Badge className="bg-chart-2 text-foreground border-chart-2 mb-6 text-base md:text-lg px-4 py-2" data-testid="badge-event-date">
+            <Calendar className="w-5 h-5 mr-2" />
             Saturday, January 31, 2025
           </Badge>
 
