@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
-import { ChefHat, Heart, Users } from 'lucide-react';
+import { Flame } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 export default function DonationSection() {
@@ -43,7 +43,7 @@ export default function DonationSection() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold font-display mb-6 text-foreground">
-              👉 Can't make it to the Chili Cook-Off? You can still help!
+              Can't make it to the Chili Cook-Off? You can still help!
             </h2>
             <div className="space-y-3">
               <p className="text-xl md:text-2xl font-semibold text-foreground">
@@ -59,8 +59,8 @@ export default function DonationSection() {
             <Card className="hover-elevate">
               <CardContent className="p-6 text-center">
                 <div className="mb-4 flex justify-center">
-                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Heart className="w-8 h-8 text-destructive" />
+                  <div className="w-16 h-16 rounded-full bg-destructive/10 flex items-center justify-center">
+                    <Flame className="w-8 h-8 text-destructive" />
                   </div>
                 </div>
                 <h3 className="text-lg font-bold font-display mb-2 text-foreground">
@@ -83,7 +83,7 @@ export default function DonationSection() {
               <CardContent className="p-6 text-center">
                 <div className="mb-4 flex justify-center">
                   <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
-                    <ChefHat className="w-8 h-8 text-primary" />
+                    <Flame className="w-8 h-8 text-primary" />
                   </div>
                 </div>
                 <h3 className="text-lg font-bold font-display mb-2 text-foreground">
@@ -91,8 +91,9 @@ export default function DonationSection() {
                 </h3>
                 <p className="text-3xl font-bold text-primary mb-4">$100</p>
                 <Button 
+                  variant="default"
                   size="lg" 
-                  className="w-full text-lg bg-primary hover:bg-primary/90 text-primary-foreground"
+                  className="w-full text-lg"
                   onClick={() => handleDonation(100, 'Fund New Gear')}
                   data-testid="button-donate-100"
                 >
@@ -104,8 +105,8 @@ export default function DonationSection() {
             <Card className="hover-elevate">
               <CardContent className="p-6 text-center">
                 <div className="mb-4 flex justify-center">
-                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Users className="w-8 h-8 text-chart-2" />
+                  <div className="w-16 h-16 rounded-full bg-destructive/10 flex items-center justify-center">
+                    <Flame className="w-8 h-8 text-destructive" />
                   </div>
                 </div>
                 <h3 className="text-lg font-bold font-display mb-2 text-foreground">
@@ -113,8 +114,9 @@ export default function DonationSection() {
                 </h3>
                 <p className="text-3xl font-bold text-primary mb-4">$200</p>
                 <Button 
+                  variant="destructive"
                   size="lg" 
-                  className="w-full text-lg bg-chart-2 hover:bg-chart-2/90 text-foreground"
+                  className="w-full text-lg"
                   onClick={() => handleDonation(200, 'Sponsor a Patrol')}
                   data-testid="button-donate-200"
                 >
@@ -136,7 +138,7 @@ export default function DonationSection() {
                     placeholder="Enter amount"
                     value={customAmount}
                     onChange={(e) => setCustomAmount(e.target.value)}
-                    className="text-lg h-12"
+                    className="text-lg"
                     min="1"
                     step="1"
                     data-testid="input-custom-amount"
