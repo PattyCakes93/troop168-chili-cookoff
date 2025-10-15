@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, MapPin, Clock } from 'lucide-react';
 import chiliImage from '@assets/stock_images/steaming_hot_chili_i_f192cdb6.jpg';
-import brochureImage from '@assets/1_1760488644351.png';
+import scoutUniformImage from '@assets/Generated Image October 14, 2025 - 4_54PM_1760489176442.png';
 
 export default function HeroSection() {
   const scrollToTickets = () => {
@@ -19,6 +19,14 @@ export default function HeroSection() {
           src={chiliImage} 
           alt="Steaming hot chili" 
           className="w-full h-full object-cover"
+        />
+      </div>
+
+      <div className="absolute right-8 md:right-16 top-1/2 -translate-y-1/2 w-48 md:w-72 lg:w-96 opacity-90 hidden md:block">
+        <img 
+          src={scoutUniformImage} 
+          alt="Scout uniform with shamrock and chili" 
+          className="w-full h-auto object-contain drop-shadow-2xl"
         />
       </div>
 
