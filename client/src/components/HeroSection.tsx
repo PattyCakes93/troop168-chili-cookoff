@@ -24,7 +24,7 @@ export default function HeroSection() {
         <div className="max-w-3xl relative z-10">
           <Badge className="bg-chart-2 text-foreground border-chart-2 mb-6 text-base md:text-lg px-4 py-2" data-testid="badge-event-date">
             <Calendar className="w-5 h-5 mr-2" />
-            Saturday, January 31, 2025
+            Friday, January 31, 2025
           </Badge>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-display text-primary-foreground mb-4 leading-tight whitespace-nowrap">
