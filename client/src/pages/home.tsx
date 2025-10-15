@@ -4,6 +4,7 @@ import PrizesSection from '@/components/PrizesSection';
 import WhyJoinSection from '@/components/WhyJoinSection';
 import RequirementsSection from '@/components/RequirementsSection';
 import TicketSection from '@/components/TicketSection';
+import DonationSection from '@/components/DonationSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
@@ -17,6 +18,7 @@ export default function Home() {
         <WhyJoinSection />
         <RequirementsSection />
         <TicketSection />
+        <DonationSection />
         <ContactSection />
       </main>
       <Footer />
