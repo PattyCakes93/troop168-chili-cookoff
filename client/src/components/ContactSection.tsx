@@ -10,7 +10,7 @@ export default function ContactSection() {
             Ready to Join the Competition?
           </h2>
           <p className="text-xl text-primary-foreground/90 mb-8">
-            Register to compete by November 15, 2025, so we can plan space and supplies.
+            Register to compete by November 15, 2026, so we can plan space and supplies.
           </p>
 
           <Card className="bg-primary-foreground/10 backdrop-blur-sm border-primary-foreground/20">

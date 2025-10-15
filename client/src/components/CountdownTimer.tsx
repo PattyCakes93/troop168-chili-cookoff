@@ -11,9 +11,9 @@ export default function CountdownTimer() {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
-    // Event is January 31, 2025 at 4:30 PM Central Time (UTC-6)
+    // Event is January 31, 2026 at 4:30 PM Central Time (UTC-6)
     // Convert to UTC: 4:30 PM CT = 10:30 PM UTC (22:30)
-    const eventDate = new Date('2025-01-31T22:30:00Z').getTime();
+    const eventDate = new Date('2026-01-31T22:30:00Z').getTime();
 
     const interval = setInterval(() => {
       const now = new Date().getTime();

@@ -39,7 +39,7 @@ export default function Footer() {
           </div>
 
           <p className="text-xs text-primary-foreground/50">
-            © 2025 St. Pat's Scout Troop 168. All rights reserved.
+            © 2026 St. Pat's Scout Troop 168. All rights reserved.
           </p>
         </div>
       </div>
