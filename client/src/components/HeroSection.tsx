@@ -12,16 +12,16 @@ export default function HeroSection() {
 
   return (
     <section className="relative min-h-[80vh] bg-primary overflow-hidden">
-      <div className="absolute bottom-8 right-4 md:bottom-12 md:right-12 lg:right-20 w-56 md:w-72 lg:w-96 z-10">
+      <div className="absolute bottom-4 right-4 w-40 md:w-56 lg:bottom-8 lg:right-8 lg:w-72 xl:w-80 z-0">
         <img 
           src={scoutUniformImage} 
           alt="Scout uniform with shamrock and chili" 
-          className="w-full h-auto object-contain drop-shadow-2xl"
+          className="w-full h-auto object-contain drop-shadow-2xl opacity-90"
         />
       </div>
 
       <div className="relative container mx-auto px-4 md:px-6 py-16 md:py-24 flex items-center min-h-[80vh]">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl relative z-10">
           <Badge className="bg-chart-2 text-foreground border-chart-2 mb-6" data-testid="badge-event-date">
             <Calendar className="w-4 h-4 mr-2" />
             Saturday, January 31, 2025
