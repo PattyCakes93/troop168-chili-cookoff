@@ -32,7 +32,7 @@ export default function WhyJoinSection() {
               Why Join?
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              This is more than just a cook-off — it's about community, compassion, and creating lasting memories.
+              This is more than a cook-off — this event reflects the spirit of Scouting: doing our best, helping others, and having fun along the way.
             </p>
 
             <div className="space-y-4">
