@@ -64,7 +64,7 @@ app.use((req, res, next) => {
   server.listen({
     port,
     host: "0.0.0.0",
-    reusePort: true,
+    // reusePort causes ENOTSUP on macOS local dev; omit for portability
   }, () => {
     log(`serving on port ${port}`);
   });
