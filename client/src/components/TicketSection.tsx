@@ -70,8 +70,8 @@ export default function TicketSection() {
             <h2 className="text-3xl md:text-5xl font-bold font-display mb-4 text-foreground">
               Get Your Tickets
             </h2>
-            <p className="text-lg text-muted-foreground">
-              Support your favorite scout group while securing your spot at the event!
+            <p className="text-lg md:text-xl text-foreground leading-relaxed">
+              Get fired up for a great cause! Secure your spot at the St. Pat's Troop 168 Chili Cook-Off and help our Scouts keep the adventure going all year long.
             </p>
           </div>
 
