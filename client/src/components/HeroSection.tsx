@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, MapPin, Clock } from 'lucide-react';
 import chiliImage from '@assets/stock_images/steaming_hot_chili_i_f192cdb6.jpg';
-import scoutUniformImage from '@assets/Untitled design_1760489456735.png';
+import scoutUniformImage from '@assets/Untitled design-2_1760489584459.png';
 
 export default function HeroSection() {
   const scrollToTickets = () => {
