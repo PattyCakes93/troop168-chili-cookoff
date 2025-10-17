@@ -1,0 +1,10 @@
+2025-10-16T21:22:14.525644+00:00 app[web.1]: npm notice New major version of npm available! 10.9.3 -> 11.6.2
+2025-10-16T21:22:14.525645+00:00 app[web.1]: npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.6.2
+2025-10-16T21:22:14.525645+00:00 app[web.1]: npm notice To update run: npm install -g npm@11.6.2
+2025-10-16T21:22:14.525645+00:00 app[web.1]: npm notice
+2025-10-16T21:22:14.601770+00:00 heroku[web.1]: Process exited with status 1
+2025-10-16T21:22:14.637846+00:00 heroku[web.1]: State changed from starting to crashed
+2025-10-16T21:24:54.065044+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=troop168ona-prod-dbec5e31d2eb.herokuapp.com request_id=60a4e31e-2353-333e-5833-6c3251433519 fwd="" dyno= connect=0ms service=0ms status=503 bytes=567 protocol=http1.1 tls=true tls_version=unknown
+2025-10-16T21:24:58.684685+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=troop168ona-prod-dbec5e31d2eb.herokuapp.com request_id=34e986ae-ba51-4e84-9d09-4731b240e6af fwd="" dyno= connect=0ms service=0ms status=503 bytes=567 protocol=http1.1 tls=true tls_version=unknown
+2025-10-16T21:26:05.909677+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=troop168ona-prod-dbec5e31d2eb.herokuapp.com request_id=16952026-da4b-a890-d8af-0ad9ac7c7bd4 fwd="" dyno= connect=0ms service=0ms status=503 bytes=567 protocol=http1.1 tls=true tls_version=unknown
+2025-10-16T21:26:10.340250+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=troop168ona-prod-dbec5e31d2eb.herokuapp.com request_id=411d6ff4-20d4-e8fa-0d64-694788da1397 fwd="" dyno= connect=0ms service=0ms status=503 bytes=567 protocol=http1.1 tls=true tls_version=unknown
