@@ -1,44 +1,10 @@
-import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
 import { Ticket } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
-
-// ============================================================================
-// SQUARE PAYMENT LINK - PASTE YOUR URL HERE
-// ============================================================================
-// Replace this placeholder URL with your actual Square ticket payment link
-const SQUARE_TICKET_URL = ''; // Paste $10 ticket purchase link here
-// ============================================================================
 
 export default function TicketSection() {
-  const [promoCode, setPromoCode] = useState('');
-  const { toast } = useToast();
-
   const handleRegister = () => {
-    if (!SQUARE_TICKET_URL) {
-      // If Square URL not configured yet, show a message
-      toast({
-        title: "Coming Soon!",
-        description: "Online ticket sales will be available soon. Thank you for your interest!",
-        duration: 5000,
-      });
-      return;
-    }
-
-    // Log promo code for tracking
-    // Note: Square payment links don't natively support promo codes,
-    // so this logs the code for manual tracking. You may want to set up
-    // a backend endpoint to record this data before redirecting to Square.
-    if (promoCode) {
-      console.log(`Ticket purchase - Promo Code: ${promoCode.toUpperCase()}`);
-      // TODO: Consider sending promo code to backend for tracking:
-      // await fetch('/api/track-promo', { method: 'POST', body: JSON.stringify({ code: promoCode }) });
-    }
-    
-    // Open Square payment link in new tab
-    window.open(SQUARE_TICKET_URL, '_blank', 'noopener,noreferrer');
+    // Open Google Form for ticket registration
+    window.open('https://forms.gle/QghAykWBEzkyAPpH9', '_blank');
   };
 
   return (
@@ -56,25 +22,6 @@ export default function TicketSection() {
               Tickets are $10 per person
             </p>
           </div>
-
-          <Card className="bg-background/50 mb-8">
-            <CardContent className="p-6">
-              <div className="max-w-md mx-auto">
-                <label htmlFor="ticket-promo" className="block text-sm font-medium text-foreground mb-2 text-center">
-                  Supporting a Scout? Enter their promo code (optional)
-                </label>
-                <Input
-                  id="ticket-promo"
-                  type="text"
-                  placeholder="Enter promo code"
-                  value={promoCode}
-                  onChange={(e) => setPromoCode(e.target.value)}
-                  className="text-center uppercase"
-                  data-testid="input-promo-code-ticket"
-                />
-              </div>
-            </CardContent>
-          </Card>
 
           <div className="text-center">
             <Button 

@@ -18,7 +18,6 @@ The website provides event details, competition information, and integrates with
 - Removed personal contact information per user request
 - Set ticket price to $10 per person
 - Added donation section with three preset amounts ($50, $100, $200) and custom donation option featuring flame icons in scout branding colors
-- Implemented promo code tracking system for ticket purchases to track scout affiliations
 
 ## User Preferences
 

@@ -5,33 +5,21 @@ import { Input } from '@/components/ui/input';
 import { Flame } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
-// ============================================================================
-// SQUARE PAYMENT LINKS - PASTE YOUR URLS HERE
-// ============================================================================
-// Replace these placeholder URLs with your actual Square payment links
-const SQUARE_DONATION_50_URL = '';  // Paste $50 donation link here
-const SQUARE_DONATION_100_URL = ''; // Paste $100 donation link here
-const SQUARE_DONATION_200_URL = ''; // Paste $200 donation link here
-const SQUARE_DONATION_CUSTOM_URL = ''; // Paste custom donation link here
-// ============================================================================
-
 export default function DonationSection() {
   const [customAmount, setCustomAmount] = useState('');
   const { toast } = useToast();
 
-  const handleDonation = (paymentUrl: string, amount: number, label: string) => {
-    if (!paymentUrl) {
-      // If Square URL not configured yet, show a message
-      toast({
-        title: "Coming Soon!",
-        description: "Online donations will be available soon. Thank you for your interest!",
-        duration: 5000,
-      });
-      return;
-    }
+  const handleDonation = (amount: number, label: string) => {
+    // TODO: Integrate with payment processor (Google Form or Stripe)
+    // For now, show confirmation
+    toast({
+      title: "Thank you for supporting St. Pat's Troop 168!",
+      description: "Your generosity helps our Scouts learn, serve, and grow.",
+      duration: 5000,
+    });
     
-    // Open Square payment link in new tab
-    window.open(paymentUrl, '_blank', 'noopener,noreferrer');
+    // Placeholder - replace with actual payment link
+    console.log(`Donation: $${amount} - ${label}`);
   };
 
   const handleCustomDonation = () => {
@@ -45,7 +33,7 @@ export default function DonationSection() {
       });
       return;
     }
-    handleDonation(SQUARE_DONATION_CUSTOM_URL, amount, 'Custom Amount');
+    handleDonation(amount, 'Custom Amount');
     setCustomAmount('');
   };
 
@@ -83,7 +71,7 @@ export default function DonationSection() {
                   variant="destructive" 
                   size="lg" 
                   className="w-full text-lg"
-                  onClick={() => handleDonation(SQUARE_DONATION_50_URL, 50, 'Support a Scout')}
+                  onClick={() => handleDonation(50, 'Support a Scout')}
                   data-testid="button-donate-50"
                 >
                   Donate $50
@@ -106,7 +94,7 @@ export default function DonationSection() {
                   variant="default"
                   size="lg" 
                   className="w-full text-lg"
-                  onClick={() => handleDonation(SQUARE_DONATION_100_URL, 100, 'Fund New Gear')}
+                  onClick={() => handleDonation(100, 'Fund New Gear')}
                   data-testid="button-donate-100"
                 >
                   Donate $100
@@ -129,7 +117,7 @@ export default function DonationSection() {
                   variant="destructive"
                   size="lg" 
                   className="w-full text-lg"
-                  onClick={() => handleDonation(SQUARE_DONATION_200_URL, 200, 'Sponsor a Patrol')}
+                  onClick={() => handleDonation(200, 'Sponsor a Patrol')}
                   data-testid="button-donate-200"
                 >
                   Donate $200
