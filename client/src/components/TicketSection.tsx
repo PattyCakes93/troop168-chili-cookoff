@@ -18,21 +18,21 @@ export default function TicketSection() {
             <p className="text-lg md:text-xl text-foreground leading-relaxed mb-4">
               Get fired up for a great cause! Secure your spot at the St. Pat's Troop 168 Chili Cook-Off and help our Scouts keep the adventure going all year long.
             </p>
-            <p className="text-base text-muted-foreground">
+            <p className="text-xl font-semibold text-primary">
               Tickets are $10 per person
             </p>
           </div>
 
           <div className="text-center">
-            <Button 
-              variant="destructive" 
-              size="lg" 
+            <Button
+              variant="destructive"
+              size="lg"
               className="text-xl px-12 py-6 h-auto"
               onClick={handleRegister}
               data-testid="button-register"
             >
               <Ticket className="w-6 h-6 mr-3" />
-              Buy Tickets Now
+              Get Your Tickets Now
             </Button>
             <p className="text-sm text-muted-foreground mt-4">
               All proceeds benefit St. Pat's Troop 168 for adventures, gear, service projects, and leadership activities.
